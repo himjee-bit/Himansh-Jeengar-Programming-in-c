@@ -3,6 +3,8 @@
 #include<stdio.h>
 int main()
 {
+	printf("Himansh Jeengar\nSAP ID: 590025460\nCourse- BSc CS\nBatch-1");
+	printf("\n---------------------------------------------------------------------------------\n");
 	int l1, l2, l3, b1, b2, b3, p1, p2, p3;
 	printf("Enter the length and weidth of rectangle 1:"); scanf("%d%d", &l1, &b1);
 	printf("Enter the length and weidth of rectangle 2:"); scanf("%d%d", &l2, &b2);
@@ -12,3 +14,4 @@ int main()
 	(p1>p2 && p1>p3) ? (printf("Perimeter of Rectangle1 is max!")) : ((p2>p1 && p2>p3) ? (printf("Perimeter of Rectangle 2 is max!")) : ((p3>p2 && p3>p1) ? (printf("Perimeter of Rectangle 3 is max!")) : printf("the perimeter of all rectangles are equal")));
 	return 0;
 }
+
