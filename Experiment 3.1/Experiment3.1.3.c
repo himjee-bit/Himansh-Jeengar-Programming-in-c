@@ -1,23 +1,42 @@
-/* Experiment 3.1: Conditional Statements 
-3. WAP to check if three points (x1,y1), (x2,y2) and (x3,y3) are collinear or not. */
-
+/*Experiment 3.1: Conditional Statements
+3. WAP to compute the BMI Index of the person and print the BMI values as per the following ranges. You can use the following formula to compute BMI= weight(kgs)/Height(Mts)*Height(Mts). */
 #include<stdio.h>
 int main()
 {
 	printf("Himansh Jeengar\nSAP ID: 590025460\nCourse- BSc CS\nBatch-1");
 	printf("\n---------------------------------------------------------------------------------\n");
-	double x1, x2, y1, y2, x3, y3, z;
-	printf("Enter (x1,y1):"); scanf("%lf %lf", &x1, &y1);
-	printf("Enter (x2,y2):"); scanf("%lf %lf", &x2, &y2);
-	printf("Enter (x3,y3):"); scanf("%lf %lf", &x3, &y3);
-	z=x1*(y2-y3)-y1*(x2-x3)+(x2*y3)-(y2*x3);
-	if(z==0)
+	double bmi, wt, ht;
+    printf("Enter the weight in kilograms and height in meters of the person:");
+	scanf("%lf %lf", &wt, &ht);
+	bmi=wt/(ht*ht);
+	printf("BMI of the given person is: %.2lf\n ", bmi);
+    if(bmi<=15)
 	{
-		printf("The points are collinear!");
+		printf("The person is suffering from starvation");
 	}
-	else
+	else if(15.1<=bmi && bmi<=17.5)
 	{
-		printf("The points are not collinear!");
+		printf("The person is suffering from Anorexic ");
+	}
+	else if(17.6<=bmi && bmi<=18.5)
+	{
+		printf("The person is suffering from underweight");
+	}
+	else if(18.6<=bmi && bmi<=24.9)
+	{
+		printf("The person's BMI is ideal ");
+	}
+	else if(25<=bmi && bmi<=29.9)
+	{
+		printf("The person is suffering from Overweight ");
+	}
+	else if(30<=bmi && bmi<=39.9)
+	{
+		printf("The person is suffering from Obesity ");
+	}
+	else if(40.0<=bmi)
+	{
+		printf("The person is suffering from Morbidity Overweight ");
 	}
 	return 0;
 }
